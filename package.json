@@ -17,9 +17,10 @@
         "resources": {
             "media": [
                 {
-                    "file": "images/asl_resized_mono.png",
-                    "name": "SPARK_ICON",
-                    "type": "png"
+                    "file": "images/valor",
+                    "name": "VALOR",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
                 },
                 {
                     "file": "fonts/8-BIT WONDER.TTF",
