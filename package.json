@@ -1,0 +1,47 @@
+{
+    "author": "scottybrackett@gmail.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "time_weather",
+    "pebble": {
+        "capabilities": [
+            "location"
+        ],
+        "displayName": "TIME_WEATHER",
+        "enableMultiJS": false,
+        "messageKeys": {
+            "KEY_CONDITIONS": 1,
+            "KEY_TEMPERATURE": 0
+        },
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/asl_resized_mono.png",
+                    "name": "SPARK_ICON",
+                    "type": "png"
+                },
+                {
+                    "file": "fonts/8-BIT WONDER.TTF",
+                    "name": "ATE_BIT_14",
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/8-BIT WONDER.TTF",
+                    "name": "ATE_BIT_24",
+                    "type": "font"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt"
+        ],
+        "uuid": "66a1e271-1c08-463c-ae5a-df468c62af9b",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
