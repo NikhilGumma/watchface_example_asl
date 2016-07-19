@@ -17,6 +17,12 @@
         "resources": {
             "media": [
                 {
+                    "file": "images/battery",
+                    "name": "BATTERY_IND",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/valor",
                     "name": "VALOR",
                     "targetPlatforms": null,
