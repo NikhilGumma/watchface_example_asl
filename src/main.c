@@ -35,7 +35,7 @@ static void main_window_load(Window *window) {
   //s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_ATE_BIT_24));
 
   //time layer
-  s_time_layer = text_layer_create(GRect(15, 118, 120, 40));
+  s_time_layer = text_layer_create(GRect(15, 108, 120, 50));
   text_layer_set_background_color(s_time_layer, GColorClear);
   text_layer_set_text_color(s_time_layer, GColorWhite);
   text_layer_set_text(s_time_layer, "00:00");
