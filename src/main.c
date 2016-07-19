@@ -32,18 +32,16 @@ static void main_window_load(Window *window) {
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_background_layer));
   
   // Create time TextLayer
-  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_ATE_BIT_24));
+  //s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_ATE_BIT_24));
 
   //time layer
-  s_time_layer = text_layer_create(GRect(15, 141, 120, 40));
+  s_time_layer = text_layer_create(GRect(15, 118, 120, 40));
   text_layer_set_background_color(s_time_layer, GColorClear);
-  text_layer_set_text_color(s_time_layer, GColorBlack);
-  text_layer_set_font(s_text_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_MEDIUM_NUMBERS));
-	
-	text_layer_set_text(s_time_layer, "00:00");
+  text_layer_set_text_color(s_time_layer, GColorWhite);
+  text_layer_set_text(s_time_layer, "00:00");
 
   // Improve the layout to be more like a watchface
- // text_layer_set_font(s_time_layer, s_time_font);
+  text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_LIGHT));
   text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
 
   // Add it as a child layer to the Window's root layer
@@ -75,6 +73,8 @@ static void init() {
   
   // Create main Window element and assign to pointer
   s_main_window = window_create();
+	
+	window_set_background_color(s_main_window, GColorBlack);
 
   // Set handlers to manage the elements inside the Window
   window_set_window_handlers(s_main_window, (WindowHandlers) {
