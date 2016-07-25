@@ -46,7 +46,11 @@ static void battery_update_proc(Layer *layer, GContext *ctx) {
 
 static void main_window_load(Window *window) {
 	// Create battery meter Layer
-s_battery_layer = layer_create(GRect(14, 54, 115, 2));
+#if defined(PBL_RECT)
+    s_battery_layer = layer_create(GRect(0, 160, 144, 8));
+#elif defined(PBL_ROUND)
+    s_battery_layer = layer_create(GRect(40, 155, 100, 8));
+#endif
 layer_set_update_proc(s_battery_layer, battery_update_proc);
 	// Update meter
 layer_mark_dirty(s_battery_layer);
@@ -54,8 +58,9 @@ layer_mark_dirty(s_battery_layer);
 // Add to Window
 
   // Create GBitmap, then set to created BitmapLayer
+  GRect bounds = layer_get_bounds(window_get_root_layer(s_main_window));
   s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_VALOR);
-  s_background_layer = bitmap_layer_create(GRect(0, 0, 144, 180));
+  s_background_layer = bitmap_layer_create(bounds);
   bitmap_layer_set_bitmap(s_background_layer, s_background_bitmap);
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_background_layer));
 	
@@ -70,7 +75,11 @@ layer_mark_dirty(s_battery_layer);
   //s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_ATE_BIT_24));
 
   //time layer
-  s_time_layer = text_layer_create(GRect(15, 108, 120, 50));
+  #if defined(PBL_RECT)
+  s_time_layer = text_layer_create(GRect(12, 115, 120, 45));
+  #elif defined(PBL_ROUND)
+  s_time_layer = text_layer_create(GRect(30, 110, 120, 45));
+  #endif
   text_layer_set_background_color(s_time_layer, GColorClear);
   text_layer_set_text_color(s_time_layer, GColorWhite);
   text_layer_set_text(s_time_layer, "00:00");

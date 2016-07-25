@@ -17,25 +17,25 @@
         "resources": {
             "media": [
                 {
-                    "file": "images/battery",
-                    "name": "BATTERY_IND",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
                     "file": "images/valor",
                     "name": "VALOR",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
                 {
-                    "file": "fonts/8-BIT WONDER.TTF",
-                    "name": "ATE_BIT_14",
-                    "type": "font"
+                    "file": "images/battery",
+                    "name": "BATTERY_IND",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
                 },
                 {
                     "file": "fonts/8-BIT WONDER.TTF",
                     "name": "ATE_BIT_24",
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/8-BIT WONDER.TTF",
+                    "name": "ATE_BIT_14",
                     "type": "font"
                 }
             ]
@@ -43,7 +43,8 @@
         "sdkVersion": "3",
         "targetPlatforms": [
             "aplite",
-            "basalt"
+            "basalt",
+            "chalk"
         ],
         "uuid": "66a1e271-1c08-463c-ae5a-df468c62af9b",
         "watchapp": {
